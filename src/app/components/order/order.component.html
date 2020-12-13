@@ -1,0 +1,27 @@
+<div class="container cyrine">
+  <table class="table table-striped">
+    <thead class="thead-dark">
+    <tr>
+      <td><font color="#C12869">ID</font></td>
+      <td><font color="#C12869">Reference</font></td>
+      <td><font color="#C12869">Category</font></td>
+      <td><font color="#C12869">Quantity</font></td>
+      <td><font color="#C12869">Name</font></td>
+      <td><font color="#C12869">Date</font></td>
+    </tr>
+    </thead>
+    <thead class="thead-light">
+
+    <tr *ngFor="let pro of orders">
+      <td>{{pro.id}}</td>
+      <td>{{pro.reference}}</td>
+      <td>{{pro.category}}</td>
+      <td>{{pro.quantity}}</td>
+      <td>{{pro.name}}</td>
+      <td>{{pro.date}} </td>
+
+    </tr>
+    </thead>
+
+  </table>
+</div>

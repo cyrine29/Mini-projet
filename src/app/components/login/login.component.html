@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyrine Beauty </title>
+</head>
+<body >
+<div class="form-body without-side">
+
+  <div class="row">
+    <div class="img-holder">
+      <div class="bg"></div>
+      <div class="info-holder">
+        <img src="../../../assets/fond.jpg" alt="">
+      </div>
+
+    </div>
+    <div class="form-holder">
+      <div class="form-content">
+        <div class="form-items cyrineform" >
+
+          <h3>Login to account</h3>
+          <br>
+          <b>
+            <p class="ad align-self-center"><I>
+                <font color="#8C001A">The most beautiful makeup of a woman is passion.</font>
+              </I></p>
+            <p><I>
+                <font color="#8C001A">But cosmetics are easier to buy...</font>
+              </I></p>
+          </b>
+          <form #f="ngForm">
+            <input class="form-control cyrinelogin" type="text" ngModel required  email="true" name="email" placeholder="E-mail Address" #username="ngModel">
+            <input class="form-control cyrinelogin" type="password" ngModel required  name="password" name="password" placeholder="Password" #password="ngModel">
+            <div class="form-button" >
+              <div *ngIf="errorMsg" class="alert alert-danger" role="alert">
+                your informations is missing !
+              </div>
+              <button mat-flat-button color="accent" (click)="validLogin(f)" type="submit" [disabled]="!form.get('password').valid || !form.get('email').valid" >Login</button>
+
+            </div>
+
+            <br>
+
+
+          </form>
+
+
+          <div class="page-links">
+            <a routerLink="/register">Register new account</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>

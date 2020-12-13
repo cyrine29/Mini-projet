@@ -1,0 +1,37 @@
+<div class="container update form-group">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+    <label>Reference</label>
+    <br>
+    <input class="form-control cyrinelogin" formControlName="reference" type="text" name="Reference" placeholder="Reference"
+      required>
+    <br> <mat-form-field appearance="fill">
+      <mat-label>Category</mat-label>
+      <mat-select>
+        <mat-option class="form-control" name="category" value="option">Face Powder </mat-option>
+        <mat-option class="form-control" name="category" value="option">Mascara</mat-option>
+        <mat-option class="form-control" name="category" value="option">Lipstick</mat-option>
+        <mat-option class="form-control" name="category" value="option">Eyeliner</mat-option>
+        <mat-option class="form-control" name="category" value="option">Eye Shadow</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <!--<input class="form-control cyrinelogin" formControlName="category" type="text" name="category" placeholder="Category"
+      required>-->
+    <br><label>ExpiredDate</label><br>
+    <input class="form-control cyrinelogin" formControlName="expireddate" type="date" name="ExpiredDate"
+      placeholder="ExpiredDate" required>
+    <br>
+    <label>Quantity</label>
+    <br><input class="form-control cyrinelogin" formControlName="quantity" type="text" name="Quantity"
+      placeholder="Quantity" required> <br>
+
+    <input id="file" type="file" formControlName="image" (change)="onFileChange($event)">
+    <img [src]="imageSrc" *ngIf="imageSrc" style="height: 100px; width:100px">
+
+        <div class="form-group">
+          <button mat-flat-button color="accent" type="submit">Save  </button>
+        </div>
+
+
+  </form>
+</div>

@@ -1,0 +1,51 @@
+
+<div *ngIf="isRegister()">
+<nav class="navbar navbar-light bg-light justify-content-between">
+
+    <a class="navbar-left"><img class="logo" src="../../../assets/Sans titre-1.png"></a>
+
+  <form class="form-inline">
+    <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon" routerLink="/">
+      <mat-icon routerLink="/">open_in_new</mat-icon>
+    </button></form>
+</nav>
+</div>
+<div *ngIf="isAdd()">
+
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <a routerLink="/admin" class="navbar-left"><img class="logo" src="../../../assets/Sans titre-1.png"></a>
+
+    <form class="form-inline">
+      <button mat-icon-button routerLink="/admin/add">Add</button>
+      <button mat-icon-button routerLink="/admin/orders">Orders</button>
+      <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon" routerLink="/">
+
+  <mat-icon  routerLink="/">open_in_new</mat-icon>
+</button>
+     <!-- <button  mat-raised-button color="accent" type="submit">Log Out</button>-->
+    </form>
+  </nav>
+</div>
+
+<div *ngIf="isShw()">
+
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-left"><img class="logo" src="../../../assets/Sans titre-1.png"></a>
+    <form class="form-inline">
+      <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon" routerLink="/">
+        <mat-icon routerLink="/">open_in_new</mat-icon>
+      </button>
+    </form>
+  </nav>
+</div>
+<div *ngIf="isUpdate()">
+
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-left"><img class="logo" src="../../../assets/Sans titre-1.png"></a>
+    <form class="form-inline">
+      <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon" routerLink="/">
+        <mat-icon routerLink="/">open_in_new</mat-icon>
+      </button>
+    </form>
+  </nav>
+</div>

@@ -1,0 +1,64 @@
+
+<div class="container productlsit">
+
+
+
+  <!-- /.col-lg-3 -->
+
+
+  <div class="row" >
+
+    <div class="col-lg-12 col-md-12 mb-4">
+      <div class="card h-100" >
+        <a href="#"><img class="card-img-top" src="{{product?.fileSource}}" alt=""></a>
+        <div class="card-body" *ngIf="product">
+          <h4 class="card-title">
+          <h2> <a > <font color="#C12869">About The New Product</font></a></h2> <br>
+           <ul class="list-group list-group-flush">
+           <li class="list-group-item ">
+             <h3><font color="#B38481"><I> Reference: {{product.reference}}</I> </font><br></h3>
+            </li>
+            <li class="list-group-item">
+              <h3><font color="#C5908E"><I>Category: {{product.category}} </I></font><br></h3>
+              </li>
+          <li class="list-group-item">
+            <h3> <font color="#C48189"><I>ExpiredDate: {{product.expireddate}}</I></font><br></h3>
+            </li>
+          <li class="list-group-item">
+            <h3><font color="#C48793"> <I>Quantity: {{product.quantity}}</I></font><br></h3>
+            </li>
+<form [formGroup]="form" (ngSubmit)="productService.submitorder(form.value)">
+  <input class="form-control cyrinelogin" formControlName="reference" type="hidden" name="reference" placeholder="Reference" [(ngModel)]="product.reference">
+  <input class="form-control cyrinelogin" formControlName="category" type="hidden" name="reference" placeholder="Category" [(ngModel)]="product.category">
+  <input class="form-control cyrinelogin" formControlName="date" type="hidden" name="date" placeholder="date" [(ngModel)]="cValue">
+
+  <input formControlName="quantity"  name="quantity"  class="form-control" type="number" placeholder="how many u want">
+  <input formControlName="name"  name="name"  class="form-control" type="text" placeholder="Name">
+
+  <br>
+            <button type="submit" class="btn btn-primary" >Order Now</button>
+</form>
+             </ul>
+          </h4>
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.col-lg-9 -->
+
+<!-- /.row -->
+
+
+
+
+
+
+
+

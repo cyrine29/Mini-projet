@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from brandio.io/envato/iofrm/html/register19.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Dec 2020 21:22:56 GMT -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+</head>
+<body>
+
+<div class="form-body without-side">
+
+  <div class="row">
+    <div class="img-holder">
+      <div class="bg"></div>
+      <div class="info-holder">
+        <img src="../../../assets/fond.jpg" alt="">
+      </div>
+
+    </div>
+    <div class="form-holder">
+      <div class="form-content">
+        <div class="form-items">
+          <h3>Register new account</h3>
+          <br>
+          <b><p class="ad align-self-center"><I><font color="#8C001A">The most beautiful makeup of a woman is passion.</font></I></p>
+          <p><I><font color="#8C001A">But cosmetics are easier to buy...</font></I></p></b>
+          <form  [formGroup]="form" (ngSubmit)="userService.submit(form.value)">
+            <input class="form-control cyrinelogin"  formControlName="name"  type="text" name="name" placeholder="Full Name" required>
+            <div class="alert alert-danger" *ngIf="!form.get('name').valid && form.get('name').touched">rquired name </div>
+            <input class="form-control cyrinelogin" formControlName="email"  type="email" name="email" placeholder="E-mail Address" required>
+            <div class="alert alert-danger" *ngIf="!form.get('email').valid && form.get('email').touched">rquired name </div>
+
+            <input class="form-control cyrinelogin" formControlName="password" type="password" name="password" placeholder="Password" required>
+            <div class="alert alert-danger" *ngIf="!form.get('password').valid && form.get('password').touched">rquired name </div>
+
+            <div class="form-button">
+              <button mat-flat-button color="accent" id="submit" type="submit" [disabled]="!form.get('password').valid || !form.get('email').valid || !form.get('name').valid" >Register</button>
+            </div>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+
+</html>
+
+

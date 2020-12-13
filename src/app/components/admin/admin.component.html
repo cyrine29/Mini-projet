@@ -1,0 +1,27 @@
+<div class="container cyrine">
+  <table class="table table-striped">
+    <thead class="thead-dark">
+    <tr>
+      <td><font color="#C12869">ID</font></td>
+      <td><font color="#C12869">Category</font></td>
+      <td><font color="#C12869">Reference</font></td>
+      <td><font color="#C12869">ExpiredDate</font></td>
+      <td><font color="#C12869">Action</font></td>
+    </tr>
+    </thead>
+    <thead class="thead-light">
+
+    <tr *ngFor="let pro of produc">
+      <td>{{pro.id}}</td>
+      <td>{{pro.category}}</td>
+      <td>{{pro.reference}}</td>
+      <td>{{pro.expireddate}}</td>
+      <td>
+      <button [routerLink]="['/admin/update/',pro.id]" class="btn btn-primary">Update </button>
+      <button [routerLink]="['/admin/delete/',pro.id]" class="btn btn-danger">Delete </button>
+      </td>
+    </tr>
+    </thead>
+
+  </table>
+</div>

@@ -1,0 +1,6 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+.update {
+  margin-top: 5%;
+  width: 50% !important;
+  height: 50% !important;
+}
